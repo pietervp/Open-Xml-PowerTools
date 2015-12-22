@@ -372,7 +372,7 @@ namespace OpenXmlPowerTools
                 }
 
                 int sourceNum = 0;
-                foreach (Source source in sources)
+                foreach (Source source in sources.OrderBy(src => src.InsertId != null))
                 {
                     if (source.InsertId != null)
                     {
